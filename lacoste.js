@@ -29,10 +29,6 @@ async function teste1(){
   const $ = cheerio.load(response1.data)
   var secure_key = $('input[name="dwfrm_login_securekey"]').attr('value')
 
-  const coisa = 5+5
-
-  console.log('qualquer coisa: ' + coisa)
-
   const respoonse2 = await axios({
     method: 'POST',
     url: login_url,
